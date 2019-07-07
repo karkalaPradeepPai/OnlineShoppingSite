@@ -1,0 +1,17 @@
+body{
+    background-color:aliceblue;
+    color: darkblue;
+     background-image: url("ecommerce.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+    color:darkblue;
+    font-size:30px;
+    font-style:italic;
+    text-align: center;
+}
+.hbar1 {
+display: inline;
+margin: 15px;
+}

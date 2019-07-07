@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+<body>
+ {% if prodlist %}
+ <h1>List of Products</h1>
+ <ol>
+ {% for p in prodlist %}
+     <li> <p>{{ p.name }} - {{p.price}} </p></li>
+ {% endfor %}
+ </ol>
+ {% else %}
+ <strong>There are no available products!</strong>
+ {% endif %}
+
+ <h1>Place Order:</h1>   <!--Places the order from the form created -->
+ <form action="../myapp/placeorder" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+     <p><a href="about">About page</a></p>
+</body>
+{% endblock %}
